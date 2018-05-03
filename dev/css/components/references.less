@@ -1,0 +1,54 @@
+
+.references {
+    background: @backgroundcolor;
+    .feedback-box {        
+        float: left;
+        background: #FFFFFF;
+        padding: 25px;
+        margin-bottom: 13px;
+        text-align: left;
+        border-radius: 4px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        display: block;
+        z-index: 5;
+        .message {
+            .font-size(1.5);
+            color: #777777;
+        }
+        .person {
+            height: 73px;
+            margin-top: 10px;
+        }
+        .person-info {
+            float: left;
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+        .person-info .person-name {
+            font-family: 'Homemade Apple', serif;
+            color: #404040;
+        }
+        .person-info .person-company {
+            .font-size(1.3);
+        }
+        .person-image {
+            float: right;
+            width: 73px;
+            height: 73px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #f6f6f6;
+            @media(@def) {
+                display: none;
+            }
+            @media(@xxs) {
+                display: block;
+            }
+        }
+        .person-image img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

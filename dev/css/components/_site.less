@@ -1,0 +1,108 @@
+/*
+   Colors
+*/
+
+@backgroundcolor: ~'#231303';
+@backgroundcolornavbar: ~'#F9F9F9';
+
+@backgroundcolorheaderoverlay: ~'rgba(32, 16, 0, 0.4)';
+
+@backgroundcolorseparator: ~'rgba(0, 99, 124, 0.5)';
+
+@backgroundcolorcompanies: ~'rgba(255, 255, 255, 0.9)';
+
+@backgroundcolorcontact: ~'rgba(0, 21, 31, 0.7)';
+
+@underlinecolor: ~'rgba(46, 128, 171, 0.4)';
+
+@lightheadertextcolor: ~'rgba(49, 138, 184, 1)';
+
+/*
+   Selection colours
+*/
+
+::selection {
+    background: rgb(0, 139, 191);
+    color: #FFF;
+}
+::-moz-selection {
+    background: rgb(0, 139, 191);
+    color: #FFF;
+}
+
+/*
+   Site-wide styles
+*/
+
+a:focus,
+a:hover,
+a:active {
+    outline: 0;
+    text-decoration: none;
+}
+*:focus {
+    outline: 0;
+}
+a img {
+    border: 0;
+}
+body {
+    font-family: 'Lato', sans-serif !important;
+    color: #808080;
+    font-weight: normal;
+    overflow-x: hidden;
+    line-height: 25px;
+    text-align: center;
+}
+.clear {
+    clear: both;
+}
+p {
+    margin: 0 0 0.8em 0;
+}
+h1 {
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 700;
+    line-height: 35px;
+}
+h2 {
+    font-family: 'Lato', 'sans-serif';
+    font-weight: 400;
+    line-height: 35px;
+}
+
+/*
+   Links and hover
+*/
+
+@linkText: #555555;
+@linkHover: rgb(0, 146, 201);
+a {
+    -webkit-transition: all 700ms;
+    -o-transition: all 700ms;
+    transition: all 700ms;
+    text-decoration: none;
+}
+.link-colors(@linkText, @linkHover);
+
+/*
+   Separator
+*/
+
+.separator-one {
+    background: @backgroundcolorseparator;
+    padding: 40px 0;
+}
+@media (min-width: 320px) {}
+@media (min-width: 480px) {
+    .separator-one {
+        padding: 50px 0;
+    }
+}
+@media (min-width: 768px) {
+    .separator-one {
+        padding: 125px 0;
+    }
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}

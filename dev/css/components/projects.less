@@ -1,0 +1,37 @@
+
+.projects-title {
+    background: url(/static/images/lines-dark.png) repeat-x center;
+    .projects-title-text {
+        background: @backgroundcolor;
+    }
+}
+.projects {
+    &__container {
+        display: table;
+        width: 100%;
+    }
+    &__image-container {
+        display: table-cell;
+        width: 100%;
+        text-align: center;
+    }
+    &__image {
+        display: inline-block;
+        width: 130px;
+        height: 60px;
+        background-size: contain;
+    }
+    img {
+        max-width: 130px;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        -webkit-transition: all ease .55s;
+        transition: all ease .55s;
+    }
+    img:hover {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+}

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A static web site builder based on the web-starter-hugo repository.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "node scripts/inline-images.js",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "bash ./scripts/devserver.sh"
   },
   "repository": {
     "type": "git",
@@ -72,5 +75,27 @@
     "postcss-wcag-contrast": "^2.0.0",
     "postcss-zindex": "^2.2.0",
     "stream-series": "^0.1.1"
+  },
+  "dependencies": {
+    "babel-loader": "^7.1.2",
+    "bootstrap-less": "^3.3.8",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "imports-loader": "^0.7.1",
+    "fastclick": "^1.0.6",
+    "featherlight": "^1.7.9",
+    "jquery": "2.1.4",
+    "jquery-knob": "1.2.11",
+    "jquery.stellar": "^0.6.2",
+    "legacy-loader": "0.0.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "script-loader": "^0.7.1",
+    "style-loader": "^0.18.2",
+    "uglify-js": "^3.1.1",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.6.0",
+    "webpack-dev-middleware": "^2.0.6",
+    "webpack-hot-middleware": "^2.22.1"
   }
 }

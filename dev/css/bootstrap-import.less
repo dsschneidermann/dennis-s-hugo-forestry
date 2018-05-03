@@ -1,0 +1,64 @@
+/*
+  With help picking "(reference)" libraries from:
+  http://transmission.vehikl.com/using-bootstrap-as-a-semantic-mixin-library/
+*/
+
+
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+ @bootstrap-less-path:          "../../node_modules/bootstrap-less/bootstrap";
+
+// Core variables and mixins
+@import (reference) "@{bootstrap-less-path}/variables.less";
+@import (reference) "@{bootstrap-less-path}/mixins.less";
+
+// Reset and dependencies
+@import "@{bootstrap-less-path}/normalize.less";
+@import "@{bootstrap-less-path}/print.less";
+@import "@{bootstrap-less-path}/glyphicons.less";
+
+// Core CSS
+@import "@{bootstrap-less-path}/scaffolding.less";
+@import "@{bootstrap-less-path}/type.less";
+@import "@{bootstrap-less-path}/code.less";
+//@import "@{bootstrap-less-path}/grid.less"; // Replaced by customized-bootstrap.less
+@import "@{bootstrap-less-path}/tables.less";
+@import "@{bootstrap-less-path}/forms.less";
+@import "@{bootstrap-less-path}/buttons.less";
+
+// Components
+@import (reference) "@{bootstrap-less-path}/component-animations.less";
+@import (reference) "@{bootstrap-less-path}/dropdowns.less";
+@import (reference) "@{bootstrap-less-path}/button-groups.less";
+@import (reference) "@{bootstrap-less-path}/input-groups.less";
+@import (reference) "@{bootstrap-less-path}/navs.less";
+@import "@{bootstrap-less-path}/navbar.less";
+@import (reference) "@{bootstrap-less-path}/breadcrumbs.less";
+@import (reference) "@{bootstrap-less-path}/pagination.less";
+@import (reference) "@{bootstrap-less-path}/pager.less";
+@import (reference) "@{bootstrap-less-path}/labels.less";
+@import (reference) "@{bootstrap-less-path}/badges.less";
+@import (reference) "@{bootstrap-less-path}/jumbotron.less";
+@import (reference) "@{bootstrap-less-path}/thumbnails.less";
+@import (reference) "@{bootstrap-less-path}/alerts.less";
+@import (reference) "@{bootstrap-less-path}/progress-bars.less";
+@import (reference) "@{bootstrap-less-path}/media.less";
+@import (reference) "@{bootstrap-less-path}/list-group.less";
+@import (reference) "@{bootstrap-less-path}/panels.less";
+@import (reference) "@{bootstrap-less-path}/responsive-embed.less";
+@import (reference) "@{bootstrap-less-path}/wells.less";
+@import (reference) "@{bootstrap-less-path}/close.less";
+
+// Components w/ JavaScript
+@import (reference) "@{bootstrap-less-path}/modals.less";
+@import (reference) "@{bootstrap-less-path}/tooltip.less";
+@import (reference) "@{bootstrap-less-path}/popovers.less";
+@import (reference) "@{bootstrap-less-path}/carousel.less";
+
+// Utility classes
+@import (reference) "@{bootstrap-less-path}/utilities.less";
+@import (reference) "@{bootstrap-less-path}/responsive-utilities.less";

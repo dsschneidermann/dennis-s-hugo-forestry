@@ -1,0 +1,7 @@
+
+.font-size(@sizeValue) {
+    @pxValue: (@sizeValue * 10);
+    @remValue: @sizeValue;
+    font-size: ~"@{pxValue}px";
+    font-size: ~"@{remValue}rem";
+}

@@ -1,0 +1,68 @@
+/*
+   Bootstrap 'center-block' with float: none and increasing margins to break into otherwise impossible bootstrap configurations, such as 2 lines with 5 items each.
+*/
+
+.make-column-centered(@numElements) {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+.make-column-for(@numElements) {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: (100% / @numElements);
+}
+
+.make-def-column-for(@numElements) {
+    @media(@def) {
+        .make-column-for(@numElements);
+        .make-column-centered(@numElements);
+    }
+}
+
+.make-xxs-column-for(@numElements) {
+    @media(@xxs) {
+        .make-column-for(@numElements);
+        .make-column-centered(@numElements);
+    }
+}
+
+.make-xs-column-for(@numElements) {
+    @media(@xs) {
+        .make-column-for(@numElements);
+        .make-column-centered(@numElements);
+    }
+}
+
+.make-sm-column-for(@numElements) {
+    @media(@sm) {
+        .make-column-for(@numElements);
+        .make-column-centered(@numElements);
+    }
+}
+
+.make-md-column-for(@numElements) {
+    @media(@md) {
+        .make-column-for(@numElements);
+        .make-column-centered(@numElements);
+    }
+}
+
+.make-lg-column-for(@numElements) {
+    @media(@lg) {
+        .make-column-for(@numElements);
+        .make-column-centered(@numElements);
+    }
+}
+
+.make-xlg-column-for(@numElements) {
+    @media(@xlg) {
+        .make-column-for(@numElements);
+        .make-column-centered(@numElements);
+    }
+}

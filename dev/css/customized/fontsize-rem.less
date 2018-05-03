@@ -1,0 +1,29 @@
+
+html {
+    /* Set root fontsize so 1rem is 10px (given a default browser fontsize of 16px) */
+    font-size: 62.5%;
+}
+
+body {
+    /* Restore size to 16px */
+    .font-size(1.6);
+    /* Use bootstrap default line height multiplier */
+    line-height: 1.42857143;
+}
+
+/*
+   Modify Bootstrap 3 fontsizes to use rem. From https://gist.github.com/jasny/9731895
+*/
+
+@font-unit: 0rem; // Pick em or rem here
+
+@font-size-base: (1.6 + @font-unit);
+@font-size-large: (1.6 * 1.25 + @font-unit);
+@font-size-small: (1.6 * 0.85 + @font-unit);
+
+@font-size-h1: (3 + @font-unit);
+@font-size-h2: (2.6 + @font-unit);
+@font-size-h3: (2.4 + @font-unit);
+@font-size-h4: (1.8 + @font-unit);
+@font-size-h5: (1.7 + @font-unit);
+@font-size-h6: (1.6 + @font-unit);

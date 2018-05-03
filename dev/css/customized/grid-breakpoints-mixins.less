@@ -1,0 +1,85 @@
+
+// Generate the default mobile-first columns
+.make-def-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  float: left;
+  width: percentage((@columns / @grid-columns));
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+}
+.make-def-column-offset(@columns) {
+  margin-left: percentage((@columns / @grid-columns));
+}
+.make-def-column-push(@columns) {
+  left: percentage((@columns / @grid-columns));
+}
+.make-def-column-pull(@columns) {
+  right: percentage((@columns / @grid-columns));
+}
+
+// Generate the extra extra small columns
+.make-xxs-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  float: left;
+  width: percentage((@columns / @grid-columns));
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+}
+.make-xxs-column-offset(@columns) {
+  margin-left: percentage((@columns / @grid-columns));
+}
+.make-xxs-column-push(@columns) {
+  left: percentage((@columns / @grid-columns));
+}
+.make-xxs-column-pull(@columns) {
+  right: percentage((@columns / @grid-columns));
+}
+
+// Generate the extra large columns
+.make-xlg-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  float: left;
+  width: percentage((@columns / @grid-columns));
+  min-height: 1px;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+}
+.make-xlg-column-offset(@columns) {
+  margin-left: percentage((@columns / @grid-columns));
+}
+.make-xlg-column-push(@columns) {
+  left: percentage((@columns / @grid-columns));
+}
+.make-xlg-column-pull(@columns) {
+  right: percentage((@columns / @grid-columns));
+}
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `@grid-columns`.
+
+.make-extra-grid-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) { // initial
+    @item: ~".col-def-@{index}, .col-xxs-@{index}, .col-xlg-@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".col-def-@{index}, .col-xxs-@{index}, .col-xlg-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      position: relative;
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  ceil((@grid-gutter-width / 2));
+      padding-right: floor((@grid-gutter-width / 2));
+    }
+  }
+  .col(1); // kickstart it
+}

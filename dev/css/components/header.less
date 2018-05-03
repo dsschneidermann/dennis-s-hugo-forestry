@@ -1,0 +1,167 @@
+
+#main-nav.navbar {
+    -webkit-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+}
+
+#main-nav.navbar-visible {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.navbar-header {
+    line-height: 0.5rem;
+    font-size: 0;
+    height: auto;
+}
+
+.transition-logo {
+    -webkit-transition: all 1500ms ease-out;
+    -o-transition: all 1500ms ease-out;
+    transition: all 1500ms ease-out;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    span {
+        font-family: 'Droid Serif', sans-serif;
+        font-size: 3vh;
+        font-style: italic;
+        color: @lightheadertextcolor;
+    }
+}
+
+.transition-logo.logo-visible {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.parallax_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/*
+   Parallax images (images are hardcoded here to support mobile sizes)
+*/
+
+#parallax-background-image {
+    @media(@def-xs) {
+        background-image: url(/static/images/background-mobile.jpg) !important;
+    }
+    @media(@sm) {
+        background-image: url(/static/images/background.jpg) !important;
+    }
+}
+#parallax-foreground-image {
+    z-index: 100;
+    /* infront of header-container and behind intro-text-container */
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    @media(@def-xs) {
+        background-image: url(/static/images/profile-mobile.png) !important;
+    }
+    @media(@sm) {
+        background-image: url(/static/images/profile.png) !important;
+    }
+}
+.header-parallax {
+    overflow: hidden;
+    position: relative;
+    @media(@def) {
+        height: 250px;
+        .header-overlay,
+        .intro-text-container {
+            height: 250px;
+        }
+    }
+    @media(@xs) {
+        height: 250px;
+        .header-overlay,
+        .intro-text-container {
+            height: 250px;
+        }
+    }
+    @media(@sm) {
+        height: 300px;
+        .header-overlay,
+        .intro-text-container {
+            height: 300px;
+        }
+    }
+    @media(@md) {
+        height: 400px;
+        .header-overlay,
+        .intro-text-container {
+            height: 400px;
+        }
+    }
+    @media(@lg) {
+        height: 500px;
+        .header-overlay,
+        .intro-text-container {
+            height: 500px;
+        }
+    }
+    .container-fluid {
+        @media(@sm) {
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    .header-content-wrap {
+        z-index: 100;
+        /* header root z-index */
+    }
+    .header-overlay {
+        background: @backgroundcolorheaderoverlay;
+        z-index: 1;
+        /* behind parallax-foreground-image */
+        position: absolute;
+        width: 100%;
+    }
+    .intro-text-container {
+        z-index: 200;
+        /* in-front of parallax-foreground-image */
+        position: relative;
+    }
+    .intro-text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        text-align: left;
+        width: 100%;
+        color: #FFF;
+        text-transform: uppercase;
+        @media(@def) {
+            .font-size(2.5);
+            line-height: 25px;
+            margin-left: 25px;
+        }
+        @media(@sm) {
+            .font-size(3.5);
+            line-height: 35px;
+            margin-left: 50px;
+        }
+        @media(@md) {
+            .font-size(4.5);
+            line-height: 45px;
+            margin-left: 50px;
+        }
+        @media(@lg) {
+            .font-size(5.5);
+            line-height: 55px;
+            margin-left: 50px;
+        }
+    }
+}

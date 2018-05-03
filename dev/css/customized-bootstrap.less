@@ -1,0 +1,60 @@
+/*
+   Single-step media-queries
+*/
+
+@def-only: ~'max-width: 319px';
+@xxs-only: ~'min-width: 320px) and (max-width: 479px';
+@xs-only: ~'min-width: 480px) and (max-width: 767px';
+@sm-only: ~'min-width: 768px) and (max-width: 991px';
+@md-only: ~'min-width: 992px) and (max-width: 1199px';
+@lg-only: ~'min-width: 1200px) and (max-width: 1599px';
+@xlg-only: ~'min-width: 1600px';
+
+/*
+   Ranged (both inclusive) media-queries
+*/
+
+@def-xxs: ~'min-width: 0px) and (max-width: 479px';
+@def-xs: ~'min-width: 0px) and (max-width: 767px';
+@def-sm: ~'min-width: 0px) and (max-width: 991px';
+@def-md: ~'min-width: 0px) and (max-width: 1199px';
+@def-lg: ~'min-width: 0px) and (max-width: 1599px';
+@xxs-xs: ~'min-width: 320px) and (max-width: 767px';
+@xxs-sm: ~'min-width: 320px) and (max-width: 991px';
+@xxs-md: ~'min-width: 320px) and (max-width: 1199px';
+@xxs-lg: ~'min-width: 320px) and (max-width: 1599px';
+@xs-sm: ~'min-width: 480px) and (max-width: 991px';
+@xs-md: ~'min-width: 480px) and (max-width: 1199px';
+@sm-md: ~'min-width: 768px) and (max-width: 1199px';
+@sm-lg: ~'min-width: 768px) and (max-width: 1199px';
+
+/*
+   Continuing media-queries
+*/
+
+@def: ~'min-width: 0px';
+@xxs: ~'min-width: 320px';
+@xs: ~'min-width: 480px';
+@sm: ~'min-width: 768px';
+@md: ~'min-width: 992px';
+@lg: ~'min-width: 1200px';
+@xlg: ~'min-width: 1600px';
+
+/*
+   Imports (mixins)
+*/
+
+@import (reference) "customized/grid-breakpoints-mixins.less";
+@import "customized/grid-breakpoints.less";
+
+@import (reference) "customized/grid-centering-mixins.less";
+@import "customized/grid-centering.less";
+
+@import "customized/grid-hiding.less";
+
+@import (reference) "customized/fontsize-rem-mixins.less";
+@import "customized/fontsize-rem.less";
+
+@import (reference) "customized/link-colors-mixins.less";
+
+@import "customized/viewport-label.less";

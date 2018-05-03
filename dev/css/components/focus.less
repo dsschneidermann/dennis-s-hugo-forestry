@@ -1,0 +1,76 @@
+
+.focus {
+    overflow: hidden;
+    background: #FFFFFF;
+
+    &__highlight-intro {
+        .font-size(1.6);
+        color: #808080;
+        padding-bottom: 10px;
+        @media(@def) {
+            text-align: center;
+        }
+        @media(@sm) {
+            text-align: left;
+        }
+    }
+    &__highlight-box {
+        i.fa {
+            color: rgb(0, 146, 201);
+            .font-size(2.2);
+            padding: 11px 0;
+            @media(@def) {
+                margin-right: 0;
+                float: none;
+            }
+            @media(@sm) {
+                margin-right: 15px;
+                float: left;
+            }
+        }
+        h3 {
+            position: relative;
+            color: #404040;
+            text-transform: uppercase;
+            font-weight: 700;
+            .font-size(1.8);
+            margin-top: 10px;
+            margin-bottom: 20px;
+            @media(@def) {
+                display: block;
+            }
+            @media(@sm) {
+                display: inline-block;
+            }
+        }
+        p {
+            .font-size(1.4);
+            color: #808080;
+        }
+        .border-bottom:before {
+            @media(@sm) {
+                left: 5%;
+                width: 80%;
+            }
+        }
+        @media(@def) {
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        @media(@xxs) {
+            padding-bottom: 5px;
+        }
+        @media(@xs) {
+            padding-bottom: 10px;
+        }
+        @media(@sm) {
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        @media(@md) {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            text-align: left;
+        }
+    }
+}
