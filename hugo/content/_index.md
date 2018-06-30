@@ -6,6 +6,51 @@ subtitle: website subtitle
 focus_group:
   icon1: test1
   text1: test2
+  title: test1
+  textarea1: ''
+  icon2: ''
+  text2: ''
+  textarea2: ''
+  icon3: ''
+  text3: ''
+  textarea3: ''
+  icon4: ''
+  text4: ''
+  textarea4: ''
+cv_group:
+  url: ''
+  tex: ''
+about_group:
+  title: ''
+  text: ''
+projects_group:
+  title: ''
+  gallery: []
+score_group:
+  text1: ''
+  score1: ''
+  text2: ''
+  score2: ''
+  text3: ''
+  score3: ''
+  text4: ''
+  score4: ''
+employers_group:
+  title: ''
+  image1: ''
+  text1: ''
+  image2: ''
+  text2: ''
+  image3: ''
+  text3: ''
+references_group:
+  title: ''
+  icon1: ''
+  text1: ''
+  icon2: ''
+  text2: ''
+  icon3: ''
+  text3: ''
 
 ---
 Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
