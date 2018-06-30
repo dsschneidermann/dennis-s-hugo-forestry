@@ -1,4 +1,190 @@
 ---
 hide_body: false
 is_partial: false
-fields: []
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- type: text
+  name: subtitle
+  label: Subtitle
+  default: ''
+- name: image
+  label: Image
+  type: file
+  hidden: false
+  default: ''
+- name: type
+  label: Type
+  type: text
+  hidden: true
+  default: page
+- type: field_group
+  name: focus_group
+  label: focus_group
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: icon1
+    label: icon1
+  - type: textarea
+    name: text1
+    label: text1
+  - type: text
+    name: icon2
+    label: icon2
+  - type: textarea
+    name: text2
+    label: text2
+  - type: text
+    name: icon3
+    label: icon3
+  - type: textarea
+    name: text3
+    label: text3
+  - type: text
+    name: icon4
+    label: icon4
+  - type: textarea
+    name: text4
+    label: text4
+- type: field_group
+  name: cv_group
+  label: cv_group
+  fields:
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: tex
+    label: text
+- type: field_group
+  name: about_group
+  label: about_group
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: text
+    label: text
+- type: field_group
+  name: projects_group
+  label: projects_group
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: image_gallery
+    name: gallery
+    label: Gallery  
+- type: field_group
+  name: score_group
+  label: score_group
+  fields:
+  - type: textarea
+    name: text1
+    label: text1
+  - name: score1
+    label: score1
+    type: number
+    hidden: false
+    config:
+      min: '0'
+      max: '100'
+    default: '50'
+  - type: textarea
+    name: text2
+    label: text2
+  - name: score2
+    label: score2
+    type: number
+    hidden: false
+    config:
+      min: '0'
+      max: '100'
+    default: '50'
+  - type: textarea
+    name: text3
+    label: text3
+  - name: score3
+    label: score3
+    type: number
+    hidden: false
+    config:
+      min: '0'
+      max: '100'
+    default: '50'
+  - type: textarea
+    name: text4
+    label: text4
+  - name: score4
+    label: score4
+    type: number
+    hidden: false
+    config:
+      min: '0'
+      max: '100'
+    default: '50'
+- type: field_group
+  name: employers_group
+  label: employers_group
+  fields:
+  - type: text
+    name: title
+    label: title
+  - name: image1
+    label: Image
+    type: file
+    hidden: false
+    default: ''
+  - type: textarea
+    name: text1
+    label: text1
+  - name: image2
+    label: Image
+    type: file
+    hidden: false
+    default: ''
+  - type: textarea
+    name: text2
+    label: text2
+  - name: image3
+    label: Image
+    type: file
+    hidden: false
+    default: ''
+  - type: textarea
+    name: text3
+    label: text3
+- type: field_group
+  name: references_group
+  label: references_group
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: icon1
+    label: icon1
+  - type: textarea
+    name: text1
+    label: text1
+  - type: text
+    name: icon2
+    label: icon2
+  - type: textarea
+    name: text2
+    label: text2
+  - type: text
+    name: icon3
+    label: icon3
+  - type: textarea
+    name: text3
+    label: text3
+pages:
+- hugo/content/_index.md
