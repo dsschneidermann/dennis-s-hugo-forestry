@@ -28,6 +28,13 @@ fields:
   - type: text
     name: title
     label: title
+  - type: textarea
+    name: text
+    label: text
+- type: field_group
+  name: focus_items_group
+  label: focus_items_group
+  fields:
   - type: text
     name: icon1
     label: icon1
@@ -72,7 +79,7 @@ fields:
     name: url
     label: url
   - type: text
-    name: tex
+    name: text
     label: text
 - type: field_group
   name: about_group
@@ -95,14 +102,14 @@ fields:
     name: gallery
     label: Gallery
 - type: field_group
-  name: score_group
-  label: score_group
+  name: skill_group
+  label: skill_group
   fields:
   - type: textarea
     name: text1
     label: text1
-  - name: score1
-    label: score1
+  - name: skill1
+    label: skill1
     type: number
     hidden: false
     config:
@@ -112,8 +119,8 @@ fields:
   - type: textarea
     name: text2
     label: text2
-  - name: score2
-    label: score2
+  - name: skill2
+    label: skill2
     type: number
     hidden: false
     config:
@@ -123,8 +130,8 @@ fields:
   - type: textarea
     name: text3
     label: text3
-  - name: score3
-    label: score3
+  - name: skill3
+    label: skill3
     type: number
     hidden: false
     config:
@@ -134,8 +141,8 @@ fields:
   - type: textarea
     name: text4
     label: text4
-  - name: score4
-    label: score4
+  - name: skill4
+    label: skill4
     type: number
     hidden: false
     config:
@@ -149,11 +156,20 @@ fields:
   - type: text
     name: title
     label: title
+  - type: text
+    name: subtitle
+    label: subtitle
   - name: image1
     label: Image
     type: file
     hidden: false
     default: ''
+  - type: text
+    name: name1
+    label: name1
+  - type: text
+    name: position1
+    label: position1
   - type: textarea
     name: text1
     label: text1
@@ -162,6 +178,12 @@ fields:
     type: file
     hidden: false
     default: ''
+  - type: text
+    name: name2
+    label: name2
+  - type: text
+    name: position2
+    label: position2
   - type: textarea
     name: text2
     label: text2
@@ -170,6 +192,12 @@ fields:
     type: file
     hidden: false
     default: ''
+  - type: text
+    name: name3
+    label: name3
+  - type: text
+    name: position3
+    label: position3
   - type: textarea
     name: text3
     label: text3
@@ -181,22 +209,40 @@ fields:
     name: title
     label: title
   - type: text
-    name: icon1
-    label: icon1
+    name: image1
+    label: image1
   - type: textarea
     name: text1
     label: text1
   - type: text
-    name: icon2
-    label: icon2
+    name: name1
+    label: name1
+  - type: text
+    name: position1
+    label: position1
+  - type: text
+    name: image2
+    label: image2
   - type: textarea
     name: text2
     label: text2
   - type: text
-    name: icon3
-    label: icon3
+    name: name2
+    label: name2
+  - type: text
+    name: position2
+    label: position2
+  - type: text
+    name: image3
+    label: image3
   - type: textarea
     name: text3
     label: text3
+  - type: text
+    name: name3
+    label: name3
+  - type: text
+    name: position3
+    label: position3
 pages:
 - hugo/content/_index.md

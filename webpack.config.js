@@ -3,7 +3,7 @@ let webpack = require('webpack');
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 let contextPath = path.resolve(__dirname, './');
-let outputPath = 'hugo/published/dev/dist/js';
+let outputPath = 'hugo/published/dev/js';
 
 let config = {
     entry: {
