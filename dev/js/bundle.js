@@ -1,4 +1,4 @@
-
+import "jquery"
 import "fastclick.exec.js"
 import "jquerystellar.exec.js"
 import "offscreen.exec.js"

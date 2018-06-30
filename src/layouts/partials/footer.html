@@ -1,50 +1,61 @@
-<hr>
 <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center">
-          {{ with .Site.Params.email }}
-          <li>
-            <a href='mailto:{{ . }}'>
-              <div class="fa-stack fa-lg">
-                <span class="fa fa-circle fa-stack-2x">&zwnj;</span>
-                <span class="fa fa-envelope-o fa-stack-1x fa-inverse">&zwnj;</span>
+<footer id="footer">
+  <section class="contact">
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2 class="white-text">Contact</h2>
+      </div>
+
+      <div class="row">
+        <div class="contact__details-container">
+          <div class="col-sm-6 contact__details">
+            <a href="{{ .Params.cv_group.url | safeHTMLAttr }}" data-featherlight="iframe" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="100%">
+              <div class="contact__icon-top">
+                <span style="font-size: 35px; margin-top: -1px; margin-bottom: -4px;" class="fa fa-file-text">&zwj;</span>
+              </div>
+              <div>
+                CV
               </div>
             </a>
-          </li>
-          {{ end }} {{ range .Site.Params.social }}
-          <li>
-            <a href="{{ .url }}">
-              <div class="fa-stack fa-lg">
-                <span class="fa fa-circle fa-stack-2x">&zwnj;</span>
-                <span class="fa fa-{{ .title }} fa-stack-1x fa-inverse">&zwnj;</span>
+          </div>
+
+          <div class="col-sm-6 contact__details">
+            <a target="_blank" href="https://dk.linkedin.com/in/dennis-schneidermann">
+              <div class="contact__icon-top">
+                <span class="fa fa-linkedin">&zwj;</span>
               </div>
+              <div>Message on LinkedIn</div>
             </a>
-          </li>
-          {{ end }}
-        </ul>
-        <p class="copyright text-muted">
-          Made with&nbsp;&nbsp;<span style="color: red;" class="fa fa-heart-o">&zwj;</span>&nbsp;&nbsp;and
-          <a class="text-muted" href="http://gohugo.io">Hugo</a>
-          <br>{{ .Site.Copyright }}
-          <br>
-        </p>
-        <div style="text-align: center; margin-top: 1.5rem;">
-          <a href="https://forestry.io">
-            {{ partial "image-prepared-2x" "/images/forestry-logotype-neg-115px.png" }}
-          </a>
-          &nbsp;
-          <a href="https://circleci.com">
-            {{ partial "image-prepared-2x" "/images/circle-logo-horizontal-white-95x27.png" }}
-          </a>
-          &nbsp;
-          <a href="https://github.com/dsschneidermann/hugo-forestry-starter">
-            {{ partial "image-prepared-2x" "/images/GitHub-Mark-Light-32px.png" }}
-          </a>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="text-muted"></div>
+            <br> Markdown flavor generated with
+            <a class="text-muted" href="https://developer.github.com/v3/markdown">GitHub API</a>
+          </div>
+          <div class="col-sm-12">
+            <p class="copyright text-muted">
+              Made with&nbsp;&nbsp;<span style="color: red;" class="fa fa-heart-o">&zwj;</span>&nbsp;&nbsp;and
+              <a class="text-muted" href="http://gohugo.io">Hugo</a>
+              <br>{{ .Site.Copyright }}
+              <br>
+            </p>
+            <div style="text-align: center; margin-top: 1.5rem;">
+              <a href="https://forestry.io">
+                {{ partial "image-prepared-2x" "/images/forestry-logotype-neg-115px.png" }}
+              </a>
+              &nbsp;
+              <a href="https://circleci.com">
+                {{ partial "image-prepared-2x" "/images/circle-logo-horizontal-white-95x27.png" }}
+              </a>
+              &nbsp;
+              <a href="https://github.com/dsschneidermann/hugo-forestry-starter">
+                {{ partial "image-prepared-2x" "/images/GitHub-Mark-Light-32px.png" }}
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </footer>
