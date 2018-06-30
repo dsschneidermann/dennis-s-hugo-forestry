@@ -1,8 +1,11 @@
 ---
 title: Home
 type: page
-image: ""
+image: ''
 subtitle: website subtitle
+focus_group:
+  icon1: test
+  text1: ''
 
 ---
 Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
