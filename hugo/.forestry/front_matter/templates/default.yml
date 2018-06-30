@@ -31,5 +31,3 @@ fields:
   - type: textarea
     name: text1
     label: text1
-pages:
-- hugo/content/_index.md

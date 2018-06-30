@@ -34,24 +34,36 @@ fields:
   - type: textarea
     name: text1
     label: text1
+  - type: textarea
+    name: textarea1
+    label: textarea1
   - type: text
     name: icon2
     label: icon2
   - type: textarea
     name: text2
     label: text2
+  - type: textarea
+    name: textarea2
+    label: textarea2
   - type: text
     name: icon3
     label: icon3
   - type: textarea
     name: text3
     label: text3
+  - type: textarea
+    name: textarea3
+    label: textarea3
   - type: text
     name: icon4
     label: icon4
   - type: textarea
     name: text4
     label: text4
+  - type: textarea
+    name: textarea4
+    label: textarea4
 - type: field_group
   name: cv_group
   label: cv_group
@@ -81,7 +93,7 @@ fields:
     label: title
   - type: image_gallery
     name: gallery
-    label: Gallery  
+    label: Gallery
 - type: field_group
   name: score_group
   label: score_group
