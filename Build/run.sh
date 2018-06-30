@@ -29,7 +29,7 @@ else
     echo -n "Working Directory: "
     pwd
     echo "Running gulp$space$@.."
-    node ./node_modules/gulp/bin/gulp --color $verbosity $@
+    node ./node_modules/gulp/bin/gulp -f webpack-gulpfile.js --color $verbosity $@
 fi
 
 exit 0

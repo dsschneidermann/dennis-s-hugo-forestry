@@ -13,49 +13,363 @@
     /* $inline.line("../styles/inline-images.css|cssmin"); */
   </style>  
 </head>
-<body>
+<body class="home responsive-background-desktop" style="background-image: url('/static/images/background.jpg');">
   <!--[if lte IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
+
+  <div class="responsive-background-small">
+    <img src="/static/images/background-mobile.jpg" alt="" width="1013px" height="716px">
+  </div>
+  <div class="responsive-background-medium">
+    <img src="/static/images/background.jpg" alt="" width="1350px" height="954px">
+  </div>
 
   <div class="preloader">
     <div class="loader-image-anim"></div>
   </div>  
 
-<div id="barba-wrapper">
-<div class="barba-container">
+<!-- <div id="barba-wrapper"> -->
+<!-- <div class="barba-container"> -->
 
 {{ partial "header.html" . }}
 
-<article>
-  <div class="container">
+<div class="site-content">
+  <section class="focus section">
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2 class="dark-text">{{ .Params.focus_group.title | safeHTML }}</h2>
+      </div>
       <div class="row">
-          <div class="col-lg-6 col-lg-offset-2 col-md-10 col-md-offset-1">
-            {{ if .Params.rendertoc }}
-            {{ .TableOfContents }}
-            {{ end }}
-            {{ .Content }}
-            {{ partial "comments.html" .}}
+        <div class="col-def-12 col-md-12 col-lg-8">
+          <div class="row">
+            <div class="col-def-12 col-sm-8 col-md-8 col-lg-12">
+              <div data-scrollreveal="enter left after 0.15s over 1s" class="focus__highlight-intro">
+                <p>{{ .Params.focus_group.text | safeHTML }}</p>
+              </div>
+            </div>
+            <div class="hidden-def hidden-xxs hidden-xs col-sm-4 col-md-3 hidden-lg-up">
+              <img src="/static/images/tablet.jpg" alt="" data-scrollreveal="enter bottom after 0.15s over 1s" width="640px" height="640px">
+            </div>
           </div>
-          <div class="col-lg-2 lg-nopadding col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
-            <div class="instagram-widget">
-              <ul class="list-inline text-center">
-                <li>
-                <a class="btn btn-primary" href="https://www.instagram.com/roestcph/" target="_blank">
-                    <span class="fa fa-lg fa-instagram">&nbsp;Follow on Insta</span>
-                </a></li>
-              </ul>
-            <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/98d4fd1ece6a5b2bbecac2aa6b329a81.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+
+          <div class="row">
+            <div class="col-def-12 col-md-10 col-lg-12">
+              <div class="row-def-1 row-xs-2">
+                <div class="column focus__highlight-box" data-scrollreveal="enter left after 0.15s over 1s">
+                  <span class="fa {{ .Params.focus_items_group.icon1 | safeHTMLAttr }}">&zwj;</span>
+                  <h3 class="border-bottom">{{ .Params.focus_items_group.text1 | safeHTML }}</h3>
+                  <p>{{ .Params.focus_items_group.textarea1 | safeHTML }}</p>
+                </div>
+                <div class="column focus__highlight-box" data-scrollreveal="enter left after 0.15s over 1s">
+                  <span class="fa {{ .Params.focus_items_group.icon2 | safeHTMLAttr }}">&zwj;</span>
+                  <h3 class="border-bottom">{{ .Params.focus_items_group.text2 | safeHTML }}</h3>
+                  <p>{{ .Params.focus_items_group.textarea2 | safeHTML }}</p>
+                </div>
+                <div class="column focus__highlight-box" data-scrollreveal="enter left after 0.15s over 1s">
+                  <span class="fa {{ .Params.focus_items_group.icon3 | safeHTMLAttr }}">&zwj;</span>
+                  <h3 class="border-bottom">{{ .Params.focus_items_group.text3 | safeHTML }}</h3>
+                  <p>{{ .Params.focus_items_group.textarea3 | safeHTML }}</p>
+                </div>
+                <div class="column focus__highlight-box" data-scrollreveal="enter left after 0.15s over 1s">
+                  <span class="fa {{ .Params.focus_items_group.icon4 | safeHTMLAttr }}">&zwj;</span>
+                  <h3 class="border-bottom">{{ .Params.focus_items_group.text4 |safeHTML }}</h3>
+                  <p>{{ .Params.focus_items_group.textarea4 | safeHTML }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-def-10 col-def-offset-1 col-xxs-8 col-xxs-offset-2 col-xs-6 col-xs-offset-3 hidden-sm hidden-md col-lg-4 col-lg-offset-0">
+          <img src="/static/images/tablet.jpg" alt="" data-scrollreveal="enter bottom after 0.15s over 1s" width="640px" height="640px">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="separator-one">
+    <a href="{{ .Params.cv_group.url | safeHTMLAttr }}" class="button green-btn" data-scrollreveal="enter left after 0.05s over 1.5s" data-featherlight="iframe"
+      data-featherlight-iframe-width="1050" data-featherlight-iframe-height="100%">
+      {{ .Params.cv_group.text }}
+    </a>
+  </section>
+
+  <section class="about-me section">
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2 class="light-header-text">{{ .Params.about_group.title }}</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-8" data-scrollreveal="enter bottom after 0s over 1s">
+          <span>
+            <p>{{ .Params.about_group.text }}</p>
+          </span>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+          <ul class="skills" data-scrollreveal="enter right after 0s over 1s">
+            <li class="skill">
+              <div class="skill-count">
+                <div class="circular-bar">
+                  <input type="text" class="dial" data-thickness=".2" data-fgColor="#e96656" data-bgColor="#222" data-width="64" data-height="64"
+                    value="{{ .Params.skill_group.skill1 | safeHTMLAttr }}" data-queuName="skills" data-waitOnScrollReveal="0" data-waitBefore="0">
+                  <div class="circular-bar-content">
+                    <label></label>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-text">
+                <span>{{ .Params.skill_group.text1 | safeHTML }}</span>
+              </div>
+            </li>
+
+            <li class="skill">
+              <div class="skill-count">
+                <div class="circular-bar">
+                  <input type="text" class="dial" data-thickness=".2" data-fgColor="#34d293" data-bgColor="#222" data-width="64" data-height="64"
+                    value="{{ .Params.skill_group.skill2 | safeHTMLAttr }}" data-queuName="skills" data-waitOnScrollReveal="0" data-waitBefore="1000">
+                  <div class="circular-bar-content">
+                    <label></label>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-text">
+                <span>{{ .Params.skill_group.text2 | safeHTML }}</span>
+              </div>
+            </li>
+
+            <li class="skill">
+              <div class="skill-count">
+                <div class="circular-bar">
+                  <input type="text" class="dial" data-thickness=".2" data-fgColor="#3ab0e2" data-bgColor="#222" data-width="64" data-height="64"
+                    value="{{ .Params.skill_group.skill3 | safeHTMLAttr }}" data-queuName="skills" data-waitOnScrollReveal="0" data-waitBefore="2000">
+                  <div class="circular-bar-content">
+                    <label></label>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-text">
+                <span>{{ .Params.skill_group.text3 | safeHTML }}</span>
+              </div>
+            </li>
+
+            <li class="skill">
+              <div class="skill-count">
+                <div class="circular-bar">
+                  <input type="text" class="dial" data-thickness=".2" data-fgColor="#e7ac44" data-bgColor="#222" data-width="64" data-height="64"
+                    value="{{ .Params.skill_group.skill4 | safeHTMLAttr }}" data-queuName="skills" data-waitOnScrollReveal="0" data-waitBefore="3000">
+                  <div class="circular-bar-content">
+                    <label></label>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-text">
+                <span>{{ .Params.skill_group.text4 | safeHTML }}</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-footer">
+        <div class="projects-title section-footer--title">
+          <h2>
+            <div class="projects-title-text section-footer--title-text">{{ .Params.projects_group.title | safeHTML }}</div>
+          </h2>
+        </div>
+
+        <div class="projects">
+          <div class="row-def-2 row-xs-3 row-sm-4 row-md-5">
+            {{ range .Params.projects_group.images }}
+            {{ $path := . }}
+              <div class="column">
+                <div class="projects__container">
+                  <div class="projects__image-container">
+                    <div class="projects__image" style="background-image: url('{{ $path | safeCSS }}');">
+                      <img src="{{ $path | safeHTMLAttr}}" width="130px" height="60px">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
           </div>
         </div>
       </div>
-  </div>
-</article>
+    </div>
+  </section>
+
+  <section class="companies section">
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2 class="dark-text">{{ .Params.employers_group.title | safeHTML }}</h2>
+        <div class="section-legend">{{ .Params.employers_group.subtitle | safeHTML }}</div>
+      </div>
+
+      <div class="row-def-1 row-sm-1 row-md-3">
+        <div class="column companies__box">
+          <div class="companies__arrow-mobile hidden-for-desktop" style="background-image: url('/static/images/arrow-mobile.png'); height: 175px;">
+            <!-- <div>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div> -->
+          </div>
+
+          <div class="companies__reveal transition-effect" data-scrollreveal="enter left after 0s over 1s">
+            <div class="companies__circle touch-enabled">
+              <div class="companies__logo" style="background-image:url('{{ .Params.employers_group.image1 | safeCSS }}'); margin: 0 10px 0 10px;">
+              </div>
+            </div>
+            <div class="companies__name">
+              <h3 class="dark-text border-bottom border-bottom--teal">{{ .Params.employers_group.name3 | safeHTML }}</h3>
+              <div class="position">{{ .Params.employers_group.position3 | safeHTML }}</div>
+            </div>
+            <div class="companies__social-icons">
+              <ul>
+                <li>
+                  <a href="{{ .Params.employers_group.url1 | safeHTMLAttr }}" target="_blank">
+                    <span class="fa fa-globe">&zwj;</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ .Params.employers_group.linked1 | safeHTML }}" target="_blank">
+                    <span class="fa fa-linkedin">&zwj;</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="companies__description">
+              <span>{{ .Params.employers_group.text1 | safeHTML }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="column companies__box">
+          <div class="companies__reveal transition-effect" data-scrollreveal="enter left after 0s over 1s">
+            <div class="companies__circle touch-enabled">
+              <div class="companies__logo" style="background-image:url('{{ .Params.employers_group.image2 | safeCSS }}'); margin: 0 25px;">
+              </div>
+            </div>
+            <div class="companies__name">
+              <h3 class="dark-text border-bottom border-bottom--teal">{{ .Params.employers_group.name3 | safeHTML }}</h3>
+              <div class="position">{{ .Params.employers_group.position3 | safeHTML }}</div>
+            </div>
+            <div class="companies__social-icons">
+              <ul>
+                <li>
+                  <a href="{{ .Params.employers_group.url2 | safeHTMLAttr }}" target="_blank">
+                    <span class="fa fa-globe">&zwj;</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ .Params.employers_group.linked2 | safeHTML }}" target="_blank">
+                    <span class="fa fa-linkedin">&zwj;</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="companies__description">
+              <span>{{ .Params.employers_group.text2 | safeHTML }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="column companies__box">
+          <div class="companies__reveal transition-effect" data-scrollreveal="enter left after 0s over 1s">
+            <div class="companies__circle touch-enabled">
+              <div class="companies__logo" style="background-image:url('{{ .Params.employers_group.image3 | safeCSS }}'); margin: 0 25px;">
+              </div>
+            </div>
+            <div class="companies__name">
+              <h3 class="dark-text border-bottom border-bottom--teal">{{ .Params.employers_group.name3 | safeHTML }}</h3>
+              <div class="position">{{ .Params.employers_group.position3 | safeHTML }}</div>
+            </div>
+            <div class="companies__social-icons">
+              <ul>
+                <li>
+                  <a href="{{ .Params.employers_group.url3 | safeHTMLAttr }}" target="_blank">
+                    <span class="fa fa-globe">&zwj;</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ .Params.employers_group.linked3 | safeHTML }}" target="_blank">
+                    <span class="fa fa-linkedin">&zwj;</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="companies__description">
+              <span>{{ .Params.employers_group.text3 | safeHTML }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="references section">
+    <div class="container-fluid">
+      <div class="section-header">
+        <h2 class="white-text">{{ .Params.references_group.title | safeHTML }}</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <div class="feedback-box">
+            <div class="message">
+              <span>{{ .Params.references_group.text1 | safeHTML }}</span>
+            </div>
+            <div class="person">
+              <div class="person-info">
+                <a target="_blank" class="person-name">{{ .Params.references_group.name1 | safeHTML }}</a>
+                <br>
+                <span class="person-company">{{ .Params.references_group.position1 | safeHTML }}</span>
+              </div>
+              <div class="person-image">
+                <img src="{{ .Params.references_group.image1 | safeHTMLAttr }}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="feedback-box">
+            <span>{{ .Params.references_group.text2 | safeHTML }}</span>
+          </div>
+          <div class="person">
+            <div class="person-info">
+              <a target="_blank" class="person-name">{{ .Params.references_group.name2 | safeHTML }}</a>
+              <br>
+              <span class="person-company">{{ .Params.references_group.position2 | safeHTML }}</span>
+            </div>
+            <div class="person-image">
+              <img src="{{ .Params.references_group.image2 | safeHTMLAttr }}" alt="" />
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="feedback-box">
+            <div class="message">
+              <span>{{ .Params.references_group.text3 | safeHTML }}</span>
+            </div>
+            <div class="person">
+              <div class="person-info">
+                <a target="_blank" class="person-name">{{ .Params.references_group.name3 | safeHTML }}</a>
+                <br>
+                <span class="person-company">{{ .Params.references_group.position3 | safeHTML }}</span>
+              </div>
+              <div class="person-image">
+                <img src="{{ .Params.references_group.image3 | safeHTMLAttr }}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 {{ partial "footer.html" . }}
 
 </div>
-</div>
+
+<!-- </div> -->
+<!-- </div> -->
 
 {{ partial "footer-scripts.html" . }}
 
