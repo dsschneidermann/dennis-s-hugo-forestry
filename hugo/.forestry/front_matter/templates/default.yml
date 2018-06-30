@@ -21,5 +21,15 @@ fields:
   type: text
   hidden: true
   default: page
+- type: field_group
+  name: focus_group
+  label: focus_group
+  fields:
+  - type: text
+    name: icon1
+    label: icon1
+  - type: textarea
+    name: text1
+    label: text1
 pages:
 - hugo/content/_index.md
