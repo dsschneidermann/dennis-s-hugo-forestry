@@ -27,20 +27,20 @@ about_group:
   text: 'text'
 projects_group:
   title: 'title'
-  images: []
+  images: ['/uploads/2018/01/02/aig-logo.png', '/uploads/2018/01/02/cega-logo.png']
 skill_group:
   text1: 'text1'
-  skill1: 'skill1'
+  skill1: 50
   text2: 'text2'
-  skill2: 'skill2'
+  skill2: 50
   text3: 'text3'
-  skill3: 'skill3'
+  skill3: 50
   text4: 'text4'
-  skill4: 'skill4'
+  skill4: 50
 employers_group:
   title: 'title'
   subtitle: 'subtitle'
-  image1: 'image1'
+  image1: '/uploads/2018/01/01/avanade-logo.svg'
   name1: 'name1'
   position1: 'position1'
   url1: 'url1'
@@ -60,7 +60,7 @@ employers_group:
   text3: 'text3'
 references_group:
   title: 'title'
-  image1: 'image1'
+  image1: '/uploads/2018/01/01/jeppebloch.jpg'
   text1: 'text1'
   name1: 'name1'
   position1: 'position1'

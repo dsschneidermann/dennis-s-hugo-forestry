@@ -3,7 +3,7 @@
   <section class="contact">
     <div class="container-fluid">
       <div class="section-header">
-        <h2 class="white-text">Contact Me</h2>
+        <h2 class="white-text">Contact</h2>
       </div>
 
       <div class="row">
@@ -11,7 +11,7 @@
           <div class="col-sm-6 contact__details">
             <a href="{{ .Params.cv_group.url | safeHTMLAttr }}" data-featherlight="iframe" data-featherlight-iframe-width="1050" data-featherlight-iframe-height="100%">
               <div class="contact__icon-top">
-                <i style="font-size: 35px; margin-top: -1px; margin-bottom: -4px;" class="fa fa-file-text"></i>
+                <span style="font-size: 35px; margin-top: -1px; margin-bottom: -4px;" class="fa fa-file-text">&zwj;</span>
               </div>
               <div>
                 CV
@@ -22,15 +22,16 @@
           <div class="col-sm-6 contact__details">
             <a target="_blank" href="https://dk.linkedin.com/in/dennis-schneidermann">
               <div class="contact__icon-top">
-                <i class="fa fa-linkedin"></i>
+                <span class="fa fa-linkedin">&zwj;</span>
               </div>
               <div>Message on LinkedIn</div>
             </a>
           </div>
 
           <div class="col-sm-12">
+            <div class="text-muted"></div>
             <br> Markdown flavor generated with
-            <a href="https://developer.github.com/v3/markdown" style="color: grey">GitHub API</a>
+            <a class="text-muted" href="https://developer.github.com/v3/markdown">GitHub API</a>
           </div>
           <div class="col-sm-12">
             <p class="copyright text-muted">

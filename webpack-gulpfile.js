@@ -395,11 +395,8 @@ function reload(done) {
 }
 
 var webpack = require('webpack');
-var webpackDevMiddleware = require('webpack-dev-middleware');
-var webpackHotMiddleware = require('webpack-hot-middleware');
 
 var webpackConfig = require('./webpack.config.js')
-var bundler;
 
 function buildWebpack() {
   return new Promise(resolve => webpack(webpackConfig, (err, stats) => {
@@ -414,17 +411,12 @@ var browserSync;
 // Watch files and serve with Webpack+Browsersync
 gulp.task('watcher', (done) => {
   browserSync = require('browser-sync').create();
-  bundler = webpack(webpackConfig);
 
   // Start a server
   browserSync.init({
     server: {
       baseDir: 'hugo/published/dev'
-    },
-    middleware: [
-      webpackDevMiddleware(bundler, { /* options */ }),
-      webpackHotMiddleware(bundler)
-    ],
+    }
   }, done());
 
   var addWatcher = function (globs, action) {
@@ -435,7 +427,7 @@ gulp.task('watcher', (done) => {
   }
 
   // Webpack files
-  addWatcher('dev/**', gulp.series(reload));
+  addWatcher('dev/**', gulp.series(buildWebpack, reload));
   // Watch files for changes
   addWatcher('hugo/static/uploads/**/*', imgResponsive);
   addWatcher(['src/images/**/*', 'hugo/images-cache/**/*'], gulp.series(imgMinJpg, imgMinGif, 'hugoDev', 'htmlDev', reload));
@@ -475,7 +467,7 @@ function debounce(func, wait, immediate) {
 gulp.task('default',
     gulp.series(
     gulp.parallel(cleanStatic, cleanLayouts, cleanDev),
-    gulp.series(cleanImages, imgResponsive, imgMinJpg, imgMinGif),
+    gulp.series(imgResponsive, imgMinJpg, imgMinGif),
     gulp.parallel(buildWebpack),
     gulp.parallel('custoModernizr', postCss, scripts, scriptsHead),
     gulp.parallel(copyDependenciesCss, copyDependenciesJsFooter,
@@ -490,7 +482,7 @@ gulp.task('default',
 gulp.task('dev',
   gulp.series(
     gulp.parallel(cleanStatic, cleanLayouts, cleanDev),
-    gulp.series(cleanImages, imgResponsive, imgMinJpg, imgMinGif),
+    gulp.series(imgResponsive, imgMinJpg, imgMinGif),
     gulp.parallel('custoModernizr', postCss, scripts, scriptsHead),
     gulp.parallel(copyDependenciesCss, copyDependenciesJsHead, copyDependenciesJsFooter,
       'copy', html, 'vendorStyles', gulp.series('generate-favicon', 'inject-favicon')),
@@ -503,7 +495,7 @@ gulp.task('dev',
 gulp.task('stage',
   gulp.series(
     gulp.parallel(cleanStatic, cleanLayouts, cleanStage),
-    gulp.series(cleanImages, imgResponsive, imgMinJpg, imgMinGif),
+    gulp.series(imgResponsive, imgMinJpg, imgMinGif),
     gulp.parallel('custoModernizr', minpostCss, minscripts, minscriptsHead),
     gulp.parallel(copyDependenciesCss, copyDependenciesJsHead, copyDependenciesJsFooter,
       'copy', html, 'vendorStyles', gulp.series('generate-favicon', 'inject-favicon')),
@@ -516,7 +508,7 @@ gulp.task('stage',
 gulp.task('live',
   gulp.series(
     gulp.parallel(cleanStatic, cleanLayouts, cleanLive),
-    gulp.series(cleanImages, imgResponsive, imgMinJpg, imgMinGif),
+    gulp.series(imgResponsive, imgMinJpg, imgMinGif),
     gulp.parallel('custoModernizr', minpostCss, minscripts, minscriptsHead),
     gulp.parallel(copyDependenciesCss, copyDependenciesJsHead, copyDependenciesJsFooter,
       'copy', html, 'vendorStyles', gulp.series('generate-favicon', 'inject-favicon')),
