@@ -3,14 +3,14 @@
   "outputTrackingEnabled": true,
   "inputs": [
     {
-      "file": "src/images/loading.gif",
-      "generated_hash": "a8479a63e6bcc1a4ea9e1409181593c5541af68a",
-      "last_changed": 1530364199464,
+      "file": "src/images/loading.svg",
+      "generated_hash": "499ea426b117c259ddb3b3a62f92691458797394",
+      "last_changed": 1530454101264,
       "outputs": [
         {
-          "file": "hugo/static/images/loading.gif",
-          "generated_hash": "31e92f7d81450cf1f815493dd190ecafb68c2013",
-          "last_changed": 1530364199464
+          "file": "hugo/static/images/loading.svg",
+          "generated_hash": "f184614fe3c6efad324ce3f7dee14082b8d40876",
+          "last_changed": 1530454101264
         }
       ]
     }
